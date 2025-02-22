@@ -14,8 +14,8 @@ TOKEN_FILE = 'token.json'
 GOOGLE_CREDENTIALS_FILE = 'credentials.json'
 
 # Configuration of Notion API
-NOTION_API_KEY = "ntn_L16905775029c4xoR00eOBCL1Pe37R4tCfgXTH7C2CA7yM"
-NOTION_DATABASE_ID = "1a1064c42a5e805da3bce58613d8178c"
+NOTION_API_KEY = "your notion API key"
+NOTION_DATABASE_ID = "your notion database id"
 NOTION_API_URL = "https://api.notion.com/v1/pages"
 
 # Keep track of Google Task IDs and Notion page IDs bt mapping files
