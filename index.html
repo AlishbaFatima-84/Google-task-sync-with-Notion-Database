@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Tasks to Notion Sync</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .start {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .stop {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Google Tasks to Notion Database Sync</h1>
+    <button class="start" onclick="startSync()">Start Sync</button>
+    <button class="stop" onclick="stopSync()">Stop Sync</button>
+
+    <script>
+        function startSync() {
+            fetch('/start_sync', {
+                    method: 'POST'
+                })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function stopSync() {
+            fetch('/stop_sync', {
+                    method: 'POST'
+                })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+
+</html>
